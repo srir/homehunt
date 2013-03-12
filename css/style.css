@@ -1,0 +1,65 @@
+body {
+  background: #AAA;
+  height: 100%;
+}
+
+#wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background: #AAA;
+}
+
+#splashscreen {
+  height: 70%;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 15%;
+}
+
+#splashscreen img {
+  width: 100%;
+}
+
+#splashscreen #brand {
+  width: 100%;
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+
+#splashscreen #brand:after {
+  clear:both;
+}
+
+#splashscreen h1 {
+  font-family: Helvetica Neue;
+  font-size: 250%;
+  text-align: center;
+}
+
+#actionbar {
+  height: 44px;
+  background-color: #BBB;
+  color: #333;
+}
+
+#actionbar h1 {
+  font-family: Helvetica Neue;
+  font-size: 180%;
+  line-height: 44px;
+  text-align: center;
+}
+
+#actionbar .logo {
+  height: 100%;
+  float: left;
+}
+
+#actionbar .button {
+  float: right;
+  height: 100%;
+  border-left: 1px solid #AAA;
+}
+
+#actionbar .button img {
+  height: 100%;
+}
