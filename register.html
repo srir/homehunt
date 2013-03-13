@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head> 
-		<title>home.hunt / home</title>
+		<title>home.hunt / register</title>
 		<link href="/css/reset.css" rel="stylesheet" type="text/css">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -12,7 +12,7 @@
         <!-- TODO: make this logo white, or reverse bar colors -->
         <img src="/img/home-logo.png" class="logo" alt="home.hunt" />
         <!-- TODO: make this logo white, or reverse bar colors -->
-        <h1>15213</h1>
+        <h1>home.hunt</h1>
         <div id="account-button" class="button">
           <a href="#">
             <img src="/img/account-button.png" alt="account" />
@@ -20,7 +20,18 @@
         </div>
       </div>
       <div id="content">
-      </div>
+        <form id="login" action="/login.html">
+          <div>
+            <input type="text" placeholder="Username"/>
+          </div>
+          <div>
+            <input type="password" placeholder="Password"/>
+          </div>
+          <div>
+            <button type="submit" id="registerbutton" class="ui-button">Register</button>
+          </div>
+        </form>
+    </div>
     <script src="/js/zepto.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {

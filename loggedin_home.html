@@ -12,7 +12,7 @@
         <!-- TODO: make this logo white, or reverse bar colors -->
         <img src="/img/home-logo.png" class="logo" alt="home.hunt" />
         <!-- TODO: make this logo white, or reverse bar colors -->
-        <h1>15213</h1>
+        <h1>home.hunt</h1>
         <div id="account-button" class="button">
           <a href="#">
             <img src="/img/account-button.png" alt="account" />
@@ -20,7 +20,16 @@
         </div>
       </div>
       <div id="content">
+        <form id="search" action="/loggedin_filters.html">
+          <button type="submit" id="searchbutton">
+            <img src="/img/search-button.png" alt="search" />
+          </button>
+          <div id="searchbox">
+            <input type="text" placeholder="Zip code"/>
+          </div>
+        </form>
       </div>
+    </div>
     <script src="/js/zepto.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {

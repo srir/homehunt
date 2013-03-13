@@ -76,6 +76,14 @@ body {
   height: 100%;
 }
 
+#content h1 {
+  font-family: Helvetica Neue;
+  font-size: 250%;
+  text-align: center;
+  margin-top: 20%;
+  position: relative;
+}
+
 #login {
   width: 90%;
   margin: 20% auto 0% auto;
