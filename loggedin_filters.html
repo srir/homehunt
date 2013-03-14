@@ -1,30 +1,105 @@
 <!DOCTYPE html>
 <html>
   <head> 
-		<title>home.hunt / home</title>
-		<link href="/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
+		<title>home.hunt / filters</title>
+		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   </head>
 	<body>
     <div id="wrapper">
       <div id="actionbar">
         <!-- TODO: make this logo white, or reverse bar colors -->
-        <img src="/img/home-logo.png" class="logo" alt="home.hunt" />
+        <img src="img/home-logo.png" class="logo" alt="home.hunt" />
         <!-- TODO: make this logo white, or reverse bar colors -->
         <h1>15213</h1>
-        <div id="account-button" class="button">
-          <a href="#">
-            <img src="/img/account-button.png" alt="account" />
+        <div id="ok-button" class="button">
+          <a href="loggedin_search_results_mapview.html">
+            <img src="img/check-button.png" alt="ok" />
           </a>
         </div>
       </div>
       <div id="content">
+        <ul id="filterlist">
+          <li class="filter">
+            <div class="filter-icon"></div>
+            <div>
+              Price
+              <div class="filter-options">
+              </div>
+            </div>
+          </li>
+          <li class="filter">
+            <div class="filter-icon"></div>
+            <div>
+              Bedrooms
+              <div class="filter-options">
+                1, 2, 3, 4, 5
+              </div>
+            </div>
+          </li>
+          <li class="filter">
+            <div class="filter-icon"></div>
+            <div>
+              Bathrooms
+              <div class="filter-options">
+              </div>
+            </div>
+          </li>
+          <li class="filter">
+            <div class="filter-icon"></div>
+            <div>
+              Amenities
+              <div class="filter-options">
+              </div>
+            </div>
+          </li>
+          <li class="filter">
+            <div class="filter-icon"></div>
+            <div>
+              Property Type
+              <div class="filter-options">
+              </div>
+            </div>
+          </li>
+          <li class="filter">
+            <div class="filter-icon"></div>
+            <div>
+              Square Feet
+              <div class="filter-options">
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-    <script src="/js/zepto.min.js"></script>
+    </div>
+    <script src="js/zepto.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function () {
+      var toggleFilters = function(elem) {
+        var $elem = $(elem); 
+        var hidden = false;
+        if ($elem.data('hidden') === undefined || $elem.data('hidden') === true) {
+          hidden = true;    
+        }
 
+        if (hidden) {
+          $elem.find('.filter-icon').css('background', 'url(img/downarrow-icon.png) center center no-repeat')
+          $elem.find('.filter-icon').css('background-color', 'transparent');
+          $elem.data('hidden', false);
+        } else {
+          $elem.find('.filter-icon').css('background', 'url(img/rightarrow-icon.png) center center no-repeat')
+          $elem.find('.filter-icon').css('background-color', 'transparent');
+          $elem.data('hidden', true);
+        }
+
+        $elem.find('.filter-options').toggle();
+      }
+
+      $(document).ready(function () {
+        $(".filter").on('click', function (e) {
+          toggleFilters(this); 
+        });
+        $(".filter").first().trigger('click');
       });
     </script>
 	</body>
