@@ -262,6 +262,11 @@ body {
   text-align: center;
 }
 
+#mapview img {
+  width: 100%;
+  height: 60%;
+}
+
 #resultlist li {
   width: 100%;
   background-color: #BBB;
