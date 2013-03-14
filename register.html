@@ -2,37 +2,41 @@
 <html>
   <head> 
 		<title>home.hunt / register</title>
-		<link href="/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   </head>
 	<body>
     <div id="wrapper">
       <div id="actionbar">
         <!-- TODO: make this logo white, or reverse bar colors -->
-        <img src="/img/home-logo.png" class="logo" alt="home.hunt" />
+        <img src="img/home-logo.png" class="logo" alt="home.hunt" />
         <!-- TODO: make this logo white, or reverse bar colors -->
         <h1>home.hunt</h1>
         <div id="account-button" class="button">
           <a href="#">
-            <img src="/img/account-button.png" alt="account" />
+            <img src="img/account-button.png" alt="account" />
           </a>
         </div>
       </div>
       <div id="content">
-        <form id="login" action="/login.html">
+        <form class="form" action="loggedin_home.html">
           <div>
-            <input type="text" placeholder="Username"/>
+            <input type="text" placeholder="Username">
           </div>
           <div>
-            <input type="password" placeholder="Password"/>
+            <input type="password" placeholder="Password">
           </div>
           <div>
-            <button type="submit" id="registerbutton" class="ui-button">Register</button>
+            <input type="password" placeholder="Password again, just in case">
+          </div>
+          <div>
+            <button type="submit" id="loginbutton" class="ui-button">Create Account</button>
           </div>
         </form>
+      </form>
     </div>
-    <script src="/js/zepto.min.js"></script>
+    <script src="js/zepto.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
 
