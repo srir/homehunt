@@ -72,7 +72,7 @@ body {
 
 #content {
   width: 98%;
-  margin: 0 auto;
+  margin: auto 1% auto 1%;
   height: 100%;
   margin-top: 10%;
   position: absolute;
@@ -199,6 +199,48 @@ body {
   margin-top: 10px;
 }
 
-#forgot-password button {
+#filterlist {
   width: 100%;
+  margin-top: 10%;
+}
+
+#filterlist li {
+  width: 100%;
+  font-size: 150%;
+  color: #333;
+  background-color: #BBB;
+  border: 1px solid #111;
+}
+
+#filterlist li:first-child {
+  border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+}
+
+#filterlist li:last-child {
+  border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+}
+
+#filterlist li .filter-icon {
+  float: left;
+  background: url(../img/rightarrow-icon.png) center center no-repeat;
+  background-size: 36px 36px;
+  width: 36px;
+  height: 36px;
+  margin-right: 5px;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+#filterlist li > div:not(.filter-icon) {
+  width: 100%;
+  padding: 9px;
+}
+
+.filter .filter-options {
+  margin-top: 10px;
+  display: none;
 }
