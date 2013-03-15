@@ -106,6 +106,14 @@ body {
   position: relative;
 }
 
+#content h2{
+  font-family: Helvetica Neue;
+  font-size: 175%;
+  text-align: center;
+  margin-top: 10%;
+  position: relative;
+}
+
 .form {
   width: 90%;
   margin: 0% auto 0% auto;
@@ -327,4 +335,8 @@ body {
   padding: 5px 3%;
   width: 36px;
   height: 36px;
+}
+
+.selectedaction{
+  border: 2px solid black;
 }
