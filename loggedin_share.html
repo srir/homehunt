@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+		<title>home.hunt / home</title>
+		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+	<body>
+    <div id="wrapper">
+      <div id="actionbar">
+        <!-- TODO: make this logo white, or reverse bar colors -->
+        <div id="back-button" class="logo"></div>
+        <!-- TODO: make this logo white, or reverse bar colors -->
+        <h1>15213</h1>
+        <div id="account-button" class="button">
+          <a href="login.html">
+            <img src="img/account-button.png" alt="account" />
+          </a>
+        </div>
+      </div>
+      <div id="content">
+	    <h3> Groups: </h3>
+        <div class="filter-icon"></div>
+            <ul id="filterlist">
+          <li class="filter">
+            <div class="filter-icon"></div>
+            <div>
+              Club friends
+              <div class="filter-options">
+			    <div class="form">
+		          <input type="text" name="group_message" placeholder="Attach message">
+		        <a href="#">
+				<button type="submit" class="sendbutton">
+				  <img src="img/check-button.png" class="sendbuttonimg" alt="send" />
+				</button>
+				</a>
+				</div>
+              </div>
+            </div>
+          </li>
+          <li class="filter">
+            <div class="filter-icon"></div>
+            <div>
+              Summer 2013 group
+              <div class="filter-options">
+                <div class="form">
+		          <input type="text" name="group_message" placeholder="Attach message">
+				  <a href="#">
+		          <button type="submit" class="sendbutton">
+				    <img src="img/check-button.png" class="sendbuttonimg" alt="send" />
+				  </button>
+				  </a>
+				</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+		<h3>Feel free to also use this link:</h3>
+		<div class="form">
+		<input type="text" name="home_link" value="http://goo.gl/6y18e">
+		</div>
+	  <div class="footer">
+		<a href="#">
+            <img src="img/contact.png" alt="contact" />
+        </a>
+		<a href="#">
+            <img src="img/favorite.png" alt="favorite" />
+        </a>
+		<a href="#">
+            <img src="img/compare.png" alt="compare" />
+        </a>
+		<a href="#">
+            <img src="img/share.png" class="selectedaction" alt="share" />
+        </a>
+  	  </div>
+    </div>
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/homehunt.js"></script>
+    <script type="text/javascript">
+       var toggleFilters = function(elem) {
+        var $elem = $(elem); 
+        var hidden = false;
+        if ($elem.data('hidden') === undefined || $elem.data('hidden') === true) {
+          hidden = true;    
+        }
+
+        if (hidden) {
+          $elem.find('.filter-icon').css('background', 'url(img/downarrow-icon.png) center center no-repeat')
+          $elem.find('.filter-icon').css('background-color', 'transparent');
+          $elem.data('hidden', false);
+        } else {
+          $elem.find('.filter-icon').css('background', 'url(img/rightarrow-icon.png) center center no-repeat')
+          $elem.find('.filter-icon').css('background-color', 'transparent');
+          $elem.data('hidden', true);
+        }
+
+        $elem.find('.filter-options').toggle();
+      }
+
+      $(document).ready(function () {
+        $(".filter").on('click', function (e) {
+          toggleFilters(this); 
+        });
+        $(".filter").first().trigger('click');
+      });
+    </script>
+	</body>
+</html>
+

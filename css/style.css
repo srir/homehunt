@@ -114,6 +114,14 @@ body {
   position: relative;
 }
 
+#content h3{
+   font-family: Helvetica Neue;
+  font-size: 175%;
+  text-align: center;
+  margin-top: 1%;
+  position: relative;
+}
+
 .form {
   width: 90%;
   margin: 0% auto 0% auto;
@@ -340,3 +348,12 @@ body {
 .selectedaction{
   border: 2px solid black;
 }
+
+.sendbutton{
+  background: #BBB;
+  border: 1px solid #ccc;
+  font-size: 100%;
+}
+.sendbuttonimg{
+  height: 16px;
+ }
