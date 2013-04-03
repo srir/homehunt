@@ -361,3 +361,17 @@ body {
  .ui-helper-hidden-accessible{
    display: none;
  }
+ 
+ .removebutton{
+  text-align: right;
+  margin-right: 2%;
+ }
+ 
+.comparebutton{
+  text-align: right;
+  margin-right: 2%;
+ }
+ 
+ .resultitem{
+   text-decoration: none;
+ }

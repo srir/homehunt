@@ -20,6 +20,7 @@
         </div>
       </div>
       <div id="content">
+	  <div class="comparebutton">Compare!</div>
 	  <ul id="resultlist">
 		<a href="loggedout_house_detail.html" class="resultitem">
           <li class="result">
@@ -62,7 +63,9 @@
     <script src="js/homehunt.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-
+        $(".comparebutton").click(function(event) {
+          window.location.href = "compare.html";
+        });
       });
     </script>
 	</body>
