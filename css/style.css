@@ -357,3 +357,7 @@ body {
 .sendbuttonimg{
   height: 16px;
  }
+ 
+ .ui-helper-hidden-accessible{
+   display: none;
+ }
