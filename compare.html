@@ -28,36 +28,25 @@
 		</form>
 		<ul id="resultlist">
             <li class="result">
+			  <div class="removebutton">X</div>
               <h4 class="location"> 1231 Morewood Ave</h4>
               <h4 class="price"> $2000/month</h4>
               <h4 class="brba"> 4BR 2BA</h4>
             </li>
             <li class="result">
+			  <div class="removebutton">X</div>
               <h4 class="location">314 Beeler St</h4>
               <h4 class="price">$900/month</h4>
               <h4 class="brba">2BR 1.5BA</h4>
               <h4 class="amenities">AC, laundry</h4>
             </li>
             <li class="result">
+			  <div class="removebutton">X</div>
               <h4 class="location">135 Beeler St</h4>
               <h4 class="price">$1023/month</h4>
               <h4 class="brba">2BR 2BA</h4>
             </li>
           </ul>
-	  <div class="footer">
-		<a href="#">
-            <img src="img/contact.png" alt="contact" />
-        </a>
-		<a href="#">
-            <img src="img/favorite.png" alt="favorite" />
-        </a>
-		<a href="#">
-            <img src="img/compare.png" class="selectedaction" alt="compare" />
-        </a>
-		<a href="#">
-            <img src="img/share.png" alt="share" />
-        </a>
-  	  </div>
     </div>
 
     <script src="js/zepto.min.js"></script>
@@ -76,6 +65,9 @@
 		$("#amenitiescheckbox").click(function() {
           $(".amenities").toggle("showOrHide");
         });
+		$(".removebutton").click(function(event){
+			$(this).parent().remove();
+		});
       });
     </script>
 	</body>
