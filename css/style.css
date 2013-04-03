@@ -365,7 +365,6 @@ body {
  .removebutton{
   text-align: right;
   margin-right: 2%;
-  display: inline-block;
   position: absolute;
   right: 0px;
  }
@@ -373,6 +372,15 @@ body {
 .comparebutton{
   text-align: right;
   margin-right: 2%;
+  position: absolute;
+  right: 0px;
+ }
+ 
+ .selectbutton{
+  text-align: right;
+  margin-right: 2%;
+  position: absolute;
+  right: 0px;
  }
  
  .resultitem{

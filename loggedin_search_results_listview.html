@@ -20,7 +20,8 @@
         </div>
       </div>
       <div id="content">
-	  <div class="comparebutton">Compare!</div>
+	  <div class="comparebutton">Compare selected</div><br>
+	  <div class="selectbutton">Select all</div>
 	  <ul id="resultlist">
 		<a href="loggedout_house_detail.html" class="resultitem">
           <li class="result">
@@ -28,7 +29,7 @@
 			$2000/month<br>
 			4BR 2BA<br>
 		    <div class="seemore">
-              <input type="checkbox"><br>
+              <input type="checkbox" class="check"><br>
          	</div>
           </li>
 		</a>
@@ -39,7 +40,7 @@
 			2BR 1.5BA<br>
 			AC, laundry<br>
             <div class="seemore">
-			  <input type="checkbox"><br>
+			  <input type="checkbox" class="check"><br>
 			</div>
           </li>
 		</a>
@@ -49,7 +50,7 @@
 			$1023/month<br>
 			2BR 2BA<br>
             <div class="seemore">
-			  <input type="checkbox"><br>
+			  <input type="checkbox" class="check"><br>
 			</div> 
           </li>
 		 </a>
@@ -65,6 +66,9 @@
       $(document).ready(function () {
         $(".comparebutton").click(function(event) {
           window.location.href = "compare.html";
+        });
+		$(".selectbutton").click(function(event) {
+          $(".check").attr("checked", true);
         });
       });
     </script>
