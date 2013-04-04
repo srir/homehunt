@@ -5,11 +5,13 @@ $(document).ready(function () {
 
   $('#actionbar h1').on('click', function () {
     var path = window.location.pathname;
+    var newpath;
     if (path.indexOf("loggedin") != -1 || path.indexOf("account") != -1) {
-      window.location.pathname = "loggedin_home.html";
+      newpath = "loggedin_home.html";
     } else {
-      window.location.pathname = "loggedout_home.html";
+      newpath = "loggedout_home.html";
     }
+    window.location.pathname = path.replace(/\/[^\/]*$/, newpath);
   });
 
   $('.footer .section').on('click', function (e) {
@@ -22,11 +24,13 @@ $(document).ready(function () {
 
   $('.result').on('click', function () {
     var path = window.location.pathname;
+    var newpath;
     if (path.indexOf("loggedin") != -1 || path.indexOf("account") != -1) {
-      window.location.pathname = "loggedin_house_detail.html";
+      newpath = "loggedin_house_detail.html";
     } else {
-      window.location.pathname = "loggedout_house_detail.html";
+      newpath = "loggedout_house_detail.html";
     }
+    window.location.pathname = path.replace(/\/[^\/]*$/, newpath);
   })
 
 });
