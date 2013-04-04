@@ -7,9 +7,9 @@ $(document).ready(function () {
     var path = window.location.pathname;
     var newpath;
     if (path.indexOf("loggedin") != -1 || path.indexOf("account") != -1) {
-      newpath = "loggedin_home.html";
+      newpath = "/loggedin_home.html";
     } else {
-      newpath = "loggedout_home.html";
+      newpath = "/loggedout_home.html";
     }
     window.location.pathname = path.replace(/\/[^\/]*$/, newpath);
   });
@@ -26,9 +26,9 @@ $(document).ready(function () {
     var path = window.location.pathname;
     var newpath;
     if (path.indexOf("loggedin") != -1 || path.indexOf("account") != -1) {
-      newpath = "loggedin_house_detail.html";
+      newpath = "/loggedin_house_detail.html";
     } else {
-      newpath = "loggedout_house_detail.html";
+      newpath = "/loggedout_house_detail.html";
     }
     window.location.pathname = path.replace(/\/[^\/]*$/, newpath);
   })
