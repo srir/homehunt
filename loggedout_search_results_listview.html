@@ -3,6 +3,8 @@
   <head> 
 		<title>home.hunt / home</title>
 		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/flat-ui.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   </head>
@@ -12,62 +14,72 @@
         <!-- TODO: make this logo white, or reverse bar colors -->
         <div id="back-button" class="logo"></div>
         <!-- TODO: make this logo white, or reverse bar colors -->
-        <h1>15213</h1>
+        <h1>Carnegie Mellon</h1>
         <div id="account-button" class="button">
           <a href="login.html">
             <img src="img/account-button.png" alt="account" />
           </a>
         </div>
       </div>
+      <div id="compare-bar">
+        <h2>Compare Homes</h2>
+        <div class="cmpbutton">
+          <a class="btn" href="loggedout_compare.html">Compare selected</a>
+        </div>
+        <div class="cmpbutton">
+          <a id="selectbutton" class="btn" href="#">Select all</a>
+        </div>
+      </div>
       <div id="content">
-	  	<div class="comparebutton">Compare selected</div><br>
-		<div class="selectbutton">Select all</div>
         <ul id="resultlist">
-		<a href="loggedout_house_detail.html" class="resultitem">
           <li class="result">
-			<h2>1231 Morewood Ave</h2>
-			$2000/month<br>
-			4BR 2BA<br>
-		    <div class="seemore">
-              <input type="checkbox" class="check"><br>
-         	</div>
-          </li>
-		</a>
-		<a href="loggedout_house_detail.html" class="resultitem">
-          <li class="result">
-		    <h2>314 Beeler St</h2>
-			$900/month<br>
-			2BR 1.5BA<br>
-			AC, laundry<br>
             <div class="seemore">
-			  <input type="checkbox" class="check"><br>
-			</div>
+              <label class="checkbox">
+                <input type="checkbox" class="check">
+              </label>
+            </div>
+            <h2><span class="fui-location-24"></span> A. 1231 Morewood Ave</h2>
+            <p>$2000/month</p>
+            <p>4BR 2BA</p>
           </li>
-		</a>
-		<a href="loggedout_house_detail.html" class="resultitem">
           <li class="result">
-		    <h2>135 Beeler St</h2>
-			$1023/month<br>
-			2BR 2BA<br>
             <div class="seemore">
-			  <input type="checkbox" class="check"><br>
-			</div> 
+              <label class="checkbox">
+                <input type="checkbox" class="check">
+              </label>
+            </div>
+            <h2><span class="fui-location-24"></span> B. 314 Beeler St</h2>
+            <p>$900/month</p>
+            <p>2BR 1.5BA</p>
+            <p>AC, laundry</p>
           </li>
-		 </a>
+          <li class="result">
+            <div class="seemore">
+              <label class="checkbox">
+                <input type="checkbox" class="check">
+              </label>
+            </div> 
+            <h2><span class="fui-location-24"></span> C. 135 Beeler St</h2>
+            <p>$1023/month</p>
+            <p>2BR 2BA</p>
+          </li>
         </ul>
-	  <a href="loggedout_search_results_mapview.html" class="viewbutton">Map View</a>
-
+      <a href="loggedout_search_results_mapview.html" class="viewbutton">Map View</a>
+      </div>
     </div>
     
-    <script src="js/zepto.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/custom_checkbox_and_radio.js"></script>
+    <script src="js/custom_radio.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
     <script src="js/homehunt.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        $(".comparebutton").click(function(event) {
-          window.location.href = "compare.html";
-        });
-		$(".selectbutton").click(function(event) {
-          $(".check").attr("checked", true);
+        $("#selectbutton").on('click', function() {
+          $(".check").prop("checked", true);
+          $("label.checkbox").addClass("checked");
         });
       });
     </script>

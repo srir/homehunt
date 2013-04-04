@@ -3,6 +3,8 @@
   <head> 
 		<title>home.hunt / home</title>
 		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/flat-ui.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   </head>
@@ -12,7 +14,9 @@
         <!-- TODO: make this logo white, or reverse bar colors -->
         <div id="home-button" class="logo"></div>
         <!-- TODO: make this logo white, or reverse bar colors -->
-        <h1>home.hunt</h1>
+        <div id="brand">
+          <h1>home.hunt</h1>
+        </div>
         <div id="account-button" class="button">
           <a href="login.html">
             <img src="img/account-button.png" alt="account" />
@@ -21,7 +25,7 @@
       </div>
       <div id="content">
         <form id="search" action="loggedout_filters.html">
-          <button type="submit" id="searchbutton">
+          <button type="submit" class="btn" id="searchbutton">
             <img src="img/search-button.png" alt="search" />
           </button>
           <div id="searchbox">
@@ -29,21 +33,20 @@
           </div>
         </form>
         <div id="user-buttons">
-          <a href="login.html" class="ui-button">Login</a>
-          <a href="register.html" class="ui-button">Register</a>
+          <a href="login.html" class="btn ui-button">Login</a>
+          <a href="register.html" class="btn ui-button">Register</a>
         </div>
       </div>
     </div>
 
-    <script src="js/zepto.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script src="js/homehunt.js"></script>
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
         var availableTags = ["Carnegie Mellon University"];
-		$("#tags").autocomplete({source: availableTags});
-		});
+        $("#tags").autocomplete({source: availableTags});
+      });
     </script>
 	</body>
 </html>

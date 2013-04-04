@@ -3,6 +3,8 @@
   <head> 
 		<title>home.hunt / home</title>
 		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/flat-ui.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   </head>
@@ -12,7 +14,7 @@
         <!-- TODO: make this logo white, or reverse bar colors -->
         <div id="back-button" class="logo"></div>
         <!-- TODO: make this logo white, or reverse bar colors -->
-        <h1>15213</h1>
+        <h1>Carnegie Mellon</h1>
         <div id="account-button" class="button">
           <a href="login.html">
             <img src="img/account-button.png" alt="account" />
@@ -20,24 +22,46 @@
         </div>
       </div>
       <div id="content">
-        House details...
-	  <div class="footer">
-		<a href="#">
-            <img src="img/contact.png" alt="contact" />
-        </a>
-		<a href="#">
-            <img src="img/favorite.png" alt="favorite" />
-        </a>
-		<a href="loggedout_house_detail.html">
-            <img src="img/home-logo.png" alt="house detail" />
-        </a>
-		<a href="loggedout_share.html">
-            <img src="img/share.png" alt="share" />
-        </a>
-  	  </div>
+        <div id="details">
+          <h1><span class="fui-location-24"></span>135 Beeler St</h1>
+          <h2>$900/mo</h2>
+          <h2>2 bedrooms</h2>
+          <h2>1 bathroom</h2>
+        </div>
+        <div id="pics">
+          <img class="housepic" src="img/house.jpg"></img>
+        </div>
+        <div class="footer">
+          <div class="section active">
+            <a href="loggedout_house_detail.html">
+              <img src="img/details.png" alt="house detail" />
+            </a>
+          </div>
+          <div class="section">
+            <a href="#">
+              <img src="img/contact.png" alt="contact" />
+            </a>
+          </div>
+          <div class="section">
+            <a href="#">
+              <img src="img/favorite.png" alt="favorite" />
+            </a>
+          </div>
+          <div class="section">
+            <a href="loggedout_share.html">
+              <img src="img/share.png" alt="share" />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="js/zepto.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/custom_checkbox_and_radio.js"></script>
+    <script src="js/custom_radio.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
     <script src="js/homehunt.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {

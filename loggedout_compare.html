@@ -3,6 +3,8 @@
   <head> 
 		<title>home.hunt / home</title>
 		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/flat-ui.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   </head>
@@ -12,10 +14,10 @@
         <!-- TODO: make this logo white, or reverse bar colors -->
         <div id="back-button" class="logo"></div>
         <!-- TODO: make this logo white, or reverse bar colors -->
-        <h1>15213</h1>
+        <h1>Carnegie Mellon</h1>
         <div id="account-button" class="button">
           <a href="login.html">
-            <img src="img/account-button.png" alt="account" />
+            <img src="img/account-button.png" alt="login" />
           </a>
         </div>
       </div>
@@ -28,46 +30,51 @@
 		</form>
 		<ul id="resultlist">
             <li class="result">
-			  <div class="removebutton">X</div>
-              <h4 class="location"> 1231 Morewood Ave</h4>
+              <div class="removebutton"><span class="fui-cross-24"></div>
+              <h3 class="location"><span class="fui-location-24"></span> A. 1231 Morewood Ave</h3>
               <h4 class="price"> $2000/month</h4>
               <h4 class="brba"> 4BR 2BA</h4>
             </li>
             <li class="result">
-			  <div class="removebutton">X</div>
-              <h4 class="location">314 Beeler St</h4>
+              <div class="removebutton"><span class="fui-cross-24"></div>
+              <h3 class="location"><span class="fui-location-24"></span> B. 314 Beeler St</h3>
               <h4 class="price">$900/month</h4>
               <h4 class="brba">2BR 1.5BA</h4>
               <h4 class="amenities">AC, laundry</h4>
             </li>
             <li class="result">
-			  <div class="removebutton">X</div>
-              <h4 class="location">135 Beeler St</h4>
+              <div class="removebutton"><span class="fui-cross-24"></div>
+              <h3 class="location"><span class="fui-location-24"></span> C. 135 Beeler St</h3>
               <h4 class="price">$1023/month</h4>
               <h4 class="brba">2BR 2BA</h4>
             </li>
           </ul>
     </div>
 
-    <script src="js/zepto.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/custom_checkbox_and_radio.js"></script>
+    <script src="js/custom_radio.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
     <script src="js/homehunt.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
         $("#pricecheckbox").click(function() {
           $(".price").toggle("showOrHide");
         });
-		$("#loccheckbox").click(function() {
+        $("#loccheckbox").click(function() {
           $(".location").toggle("showOrHide");
         });
-		$("#brbacheckbox").click(function() {
+        $("#brbacheckbox").click(function() {
           $(".brba").toggle("showOrHide");
         });
-		$("#amenitiescheckbox").click(function() {
+        $("#amenitiescheckbox").click(function() {
           $(".amenities").toggle("showOrHide");
         });
-		$(".removebutton").click(function(event){
-			$(this).parent().remove();
-		});
+        $(".removebutton").click(function(event){
+          $(this).parent().remove();
+        });
       });
     </script>
 	</body>

@@ -3,6 +3,8 @@
   <head> 
 		<title>home.hunt / filters</title>
 		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/flat-ui.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   </head>
@@ -12,7 +14,7 @@
         <!-- TODO: make this logo white, or reverse bar colors -->
         <div id="back-button" class="logo"></div>
         <!-- TODO: make this logo white, or reverse bar colors -->
-        <h1>15213</h1>
+        <h1>Carnegie Mellon</h1>
         <div id="ok-button" class="button">
           <a href="loggedin_search_results_mapview.html">
             <img src="img/check-button.png" alt="ok" />
@@ -21,7 +23,7 @@
       </div>
       <div id="content">
         <ul id="filterlist">
-          <li class="filter">
+          <li class="filter closed">
             <div class="filter-icon"></div>
             <div>
               Price
@@ -29,16 +31,17 @@
               </div>
             </div>
           </li>
-          <li class="filter">
+          <li class="filter closed">
             <div class="filter-icon"></div>
             <div>
               Bedrooms
               <div class="filter-options">
-                1, 2, 3, 4, 5
+                <div id="bedroom-filter">
+                </div>
               </div>
             </div>
           </li>
-          <li class="filter">
+          <li class="filter closed">
             <div class="filter-icon"></div>
             <div>
               Bathrooms
@@ -46,7 +49,7 @@
               </div>
             </div>
           </li>
-          <li class="filter">
+          <li class="filter closed">
             <div class="filter-icon"></div>
             <div>
               Amenities
@@ -54,7 +57,7 @@
               </div>
             </div>
           </li>
-          <li class="filter">
+          <li class="filter closed">
             <div class="filter-icon"></div>
             <div>
               Property Type
@@ -62,7 +65,7 @@
               </div>
             </div>
           </li>
-          <li class="filter">
+          <li class="filter closed">
             <div class="filter-icon"></div>
             <div>
               Square Feet
@@ -74,24 +77,21 @@
       </div>
     </div>
 
-    <script src="js/zepto.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/custom_checkbox_and_radio.js"></script>
+    <script src="js/custom_radio.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
     <script src="js/homehunt.js"></script>
     <script type="text/javascript">
       var toggleFilters = function(elem) {
         var $elem = $(elem); 
-        var hidden = false;
-        if ($elem.data('hidden') === undefined || $elem.data('hidden') === true) {
-          hidden = true;    
-        }
 
-        if (hidden) {
-          $elem.find('.filter-icon').css('background', 'url(img/downarrow-icon.png) center center no-repeat')
-          $elem.find('.filter-icon').css('background-color', 'transparent');
-          $elem.data('hidden', false);
+        if ($elem.hasClass('closed')) {
+          $elem.removeClass('closed').addClass('expanded');
         } else {
-          $elem.find('.filter-icon').css('background', 'url(img/rightarrow-icon.png) center center no-repeat')
-          $elem.find('.filter-icon').css('background-color', 'transparent');
-          $elem.data('hidden', true);
+          $elem.removeClass('expanded').addClass('closed');
         }
 
         $elem.find('.filter-options').toggle();
@@ -101,7 +101,15 @@
         $(".filter").on('click', function (e) {
           toggleFilters(this); 
         });
-        $(".filter").first().trigger('click');
+        $($(".filter").slice(1,2)).trigger('click');
+
+        $("#bedroom-filter").slider({
+          min: 1,
+          max: 5,
+          value: 2,
+          orientation: "horizontal",
+          range: "min",
+        });
       });
     </script>
 	</body>

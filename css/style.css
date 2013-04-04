@@ -1,13 +1,13 @@
 body {
   font-family: Helvetica Neue, lucida sans;
-  background: #AAA;
+  background: #7CF696;
   height: 100%;
 }
 
 #wrapper {
   width: 100%;
   margin: 0 auto;
-  background: #AAA;
+  background: #7CF696;
 }
 
 #splashscreen {
@@ -23,7 +23,7 @@ body {
 
 #splashscreen #brand {
   width: 100%;
-  margin-top: -30px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
@@ -43,18 +43,20 @@ body {
   left: 0px;
   width: 100%;
   height: 44px;
-  background-color: #BBB;
+  background-color: #2DD52D;
   color: #333;
   z-index: 1;
   box-shadow: 0px 3px 3px; 
+  overflow: hidden;
 }
 
 #actionbar h1 {
-  font-family: Helvetica Neue;
-  font-size: 180%;
-  line-height: 44px;
-  text-align: center;
   float: left;
+  color: white;
+  margin-left: 4px;
+  margin-top: 2px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 #actionbar .logo {
@@ -72,12 +74,13 @@ body {
 }
 
 #actionbar #back-button {
-  background: url(../img/back-button.png) center center no-repeat;
+  background: url(../img/back-button.png) left center no-repeat;
   background-size: 36px 36px;
-  width: 36px;
+  width: 40px;
   height: 36px;
   margin-top: 5px;
   margin-right: 2px;
+  border-right: 1px solid #AAA;
 }
 
 #actionbar .button {
@@ -96,30 +99,6 @@ body {
   height: 100%;
   margin-top: 44px;
   position: absolute;
-}
-
-#content h1 {
-  font-family: Helvetica Neue;
-  font-size: 250%;
-  text-align: center;
-  margin-top: 20%;
-  position: relative;
-}
-
-#content h2{
-  font-family: Helvetica Neue;
-  font-size: 175%;
-  text-align: center;
-  margin-top: 10%;
-  position: relative;
-}
-
-#content h3{
-   font-family: Helvetica Neue;
-  font-size: 175%;
-  text-align: center;
-  margin-top: 1%;
-  position: relative;
 }
 
 .form {
@@ -151,11 +130,9 @@ body {
   background: #ededed;
   border: 1px solid #ccc;
   font-size: 150%;
-  padding: 9px;
   width: 100%;
-  border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
+  height: 100%;
+  padding: 12px 0 11px 10px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -179,22 +156,14 @@ body {
   background: #ededed;
   border: 1px solid #ccc;
   font-size: 150%;
-  padding: 9px;
+  padding: 12px 0 11px 10px;
   width: 100%;
-  border-radius: 10px 0px 0px 10px;
-  -moz-border-radius: 10px 0px 0px 10px;
-  -webkit-border-radius: 10px 0px 0px 10px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 
 #searchbutton {
   float: right;
   width: 64px;
   margin-left: 0px;
-  background: #BBB;
-  border: 1px solid #ccc;
   border-radius: 0px 10px 10px 0px;
   -moz-border-radius: 0px 10px 10px 0px;
   -webkit-border-radius: 0px 10px 10px 0px;
@@ -212,19 +181,8 @@ body {
   margin-top: 30%;
 }
 
-.ui-button {
-  font-size: 150%;
-  padding: 5px;
-  border: 1px solid #111;
-  background-color: #BBB;
-  color: #333;
-  text-decoration: none;
-}
-
-.ui-button:active {
-  background-color: #800;
-  color: #FFF;
-  text-decoration: none;
+.btn {
+  padding: 10px;
 }
 
 .ui-button + .ui-button {
@@ -236,15 +194,16 @@ body {
 }
 
 #filterlist {
-  width: 100%;
+  width: 95%;
+  margin-left: 2.5%;
   margin-top: 10%;
 }
 
 #filterlist li {
   width: 100%;
   font-size: 150%;
-  color: #333;
-  background-color: #BBB;
+  color: white;
+  background-color: #2DD52D;
   border: 1px solid #111;
 }
 
@@ -262,7 +221,7 @@ body {
 
 #filterlist li .filter-icon {
   float: left;
-  background: url(../img/rightarrow-icon.png) center center no-repeat;
+  background-color: transparent;
   background-size: 36px 36px;
   width: 36px;
   height: 36px;
@@ -271,13 +230,25 @@ body {
   margin-top: 2px;
 }
 
+.filter.closed .filter-icon {
+  background: url(../img/rightarrow-icon.png) center center no-repeat;
+}
+
+.filter.expanded .filter-icon {
+  background: url(../img/downarrow-icon.png) center center no-repeat;
+}
+
 #filterlist li > div:not(.filter-icon) {
   width: 100%;
   padding: 9px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 .filter .filter-options {
-  margin-top: 10px;
+  margin-top: 15px;
+  padding: 5px 15px;
   display: none;
 }
 
@@ -289,8 +260,8 @@ body {
   text-align: center;
   font-size: 150%;
   padding: 10px;
-  background-color: #888;
-  color: #333;
+  background-color: rgba(45,193,45,0.6);
+  color: white;
   text-decoration: none;
   box-sizing: border-box;
 }
@@ -300,25 +271,27 @@ body {
 }
 
 #resultlist {
-  margin-top: 7px;
+  margin-top: 10%;
+  margin-left: 0;
 }
 
 #resultlist li {
   width: 100%;
-  background-color: #BBB;
+  background-color: #BDC3C7;
   border: 1px solid black;
-  padding: 15px 0px;
-  padding-left: 10px;
   box-sizing: border-box;
+  padding: 10px;
+  color: white;
 }
 
 .result h2 {
-  font-size: 120%;
+  font-size: 160%;
 }
 
 .seemore {
-  text-align: right;
-  margin-right: 2%;
+  float: right;
+  margin-top: 20px;
+  margin-right: 5px;
 }
 
 .seemore a {
@@ -326,63 +299,125 @@ body {
 }
 
 .footer {
-	background-color: #BBB;
+	background-color: #2DD52D;
 	width: 100%;
 	position: fixed;
 	bottom: 0px;
 	left: 0px;
+  height: 44px;
 	display: inline-block;
 	text-align: center;
 }
 
-.footer a{
+.footer a {
   text-decoration: none;
 }
 
-.footer img{
-  padding: 5px 3%;
-  width: 36px;
-  height: 36px;
+.section {
+  height: 100%;
+  margin-top: 4px;
+  width: 25%;
+  float: left;
 }
 
-.selectedaction{
+.section.active {
+  background-color: #2DF62D;
+}
+
+.section img {
+  width: 36px;
+}
+
+.selectedaction {
   border: 2px solid black;
 }
 
-.sendbutton{
-  background: #BBB;
-  border: 1px solid #ccc;
-  font-size: 100%;
-}
-.sendbuttonimg{
-  height: 16px;
- }
- 
- .ui-helper-hidden-accessible{
+.ui-helper-hidden-accessible {
    display: none;
- }
+}
  
- .removebutton{
+.removebutton {
   text-align: right;
   margin-right: 2%;
   position: absolute;
   right: 0px;
- }
+}
  
-.comparebutton{
-  text-align: right;
-  margin-right: 2%;
-  position: absolute;
-  right: 0px;
- }
- 
- .selectbutton{
-  text-align: right;
-  margin-right: 2%;
-  position: absolute;
-  right: 0px;
- }
- 
- .resultitem{
-   text-decoration: none;
- }
+.resultitem {
+  text-decoration: none;
+}
+
+#details {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 5%;
+}
+
+#details h1 {
+  margin-bottom: 15px;
+}
+
+#pics {
+  margin-top: 30px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.housepic {
+  width: 100%;
+  text-align: center;
+}
+
+#share-form {
+  width: 85%;
+  margin-top: 10%;
+}
+
+#group-share {
+  width: 90%;
+  margin: 5% auto 20% auto;
+}
+
+#group-share-form form {
+  margin-top: -30px;
+}
+
+.group-share-dest {
+  width: 51%;
+  float: left;
+}
+
+#sendbutton {
+  width: 45%;
+  float: right;
+}
+
+#compare-bar {
+  width: 100%;
+  height: 44px;
+  top: 44px;
+  position: fixed;
+  z-index: 1;
+  margin-bottom: 3px;
+  background-color: #34495e;
+  color: white;
+}
+
+#compare-bar h2 {
+  float: left;
+  margin-left: 6px;
+  margin-top: 2px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#compare-bar .cmpbutton {
+  margin-top: 2px;
+  margin-right: 2px;
+  float: right;
+}
+
+#userdetails {
+  width: 95%;
+  margin-left: 2.5%;
+}
