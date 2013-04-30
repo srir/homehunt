@@ -3,7 +3,9 @@ $(document).ready(function () {
     window.history.back();
   });
 
-  $('#actionbar h1').on('click', function () {
+  $('#actionbar h1').on('click', function (e) {
+    $(e.target).css('color', "#F9AF2E");
+    console.log("color change?");
     var path = window.location.pathname;
     var newpath;
     if (path.indexOf("loggedin") != -1 || path.indexOf("account") != -1) {

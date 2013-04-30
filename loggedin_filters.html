@@ -16,7 +16,7 @@
         <!-- TODO: make this logo white, or reverse bar colors -->
         <h1>Carnegie Mellon</h1>
         <div class="button">
-          <span id="ok-button-text"><a href="loggedout_search_results_mapview.html">OK</a></span>
+          <span id="ok-button-text"><a href="loggedin_search_results_mapview.html">OK</a></span>
         </div>
       </div>
       <div id="content">
@@ -119,8 +119,6 @@
       }
 
       $(document).ready(function () {
-        $('select').dropkick();
-
         $(".filter").on('click', function (e) {
           toggleFilters(this); 
         });
@@ -161,6 +159,8 @@
         });
 
         $(".filter").slice(1,2).trigger('click');
+
+        $('select').dropkick();
       });
     </script>
 	</body>
