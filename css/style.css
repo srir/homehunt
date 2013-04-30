@@ -87,6 +87,7 @@ body {
   float: right;
   height: 100%;
   border-left: 1px solid #AAA;
+  width: 44px;
 }
 
 #actionbar .button img {
@@ -185,7 +186,7 @@ body {
   padding: 10px;
 }
 
-.ui-button + .ui-button {
+.x-button + .x-button {
   margin-left: 5px;
 }
 
@@ -420,4 +421,24 @@ body {
 #userdetails {
   width: 95%;
   margin-left: 2.5%;
+}
+
+#actionbar span {
+  float: left;
+  color: white;
+  margin-left: 3px;
+  margin-top: 6px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#actionbar a {
+  text-decoration: none;
+}
+
+#actionbar a:visited {
+  color: white;
+  text-decoration: none;
 }
