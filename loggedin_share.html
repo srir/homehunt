@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+		<title>home.hunt / home</title>
+		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/flat-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+	<body>
+    <div id="wrapper">
+      <div id="actionbar">
+        <!-- TODO: make this logo white, or reverse bar colors -->
+        <div id="back-button" class="logo"></div>
+        <!-- TODO: make this logo white, or reverse bar colors -->
+        <h1>135 Beeler St.</h1>
+        <div id="account-button" class="button">
+          <a href="account.html">
+            <img src="img/account-button.png" alt="account" />
+          </a>
+        </div>
+      </div>
+      <div id="content">
+        <div id="group-share">
+          <h1>Groups</h1>
+          <div class="form" id="group-share-form">
+            <form>
+              <input type="text" name="message" placeholder="Send a message">
+              <div>
+                <select class="x-button group-share-dest" value="dest" name="dest" tabindex="1">
+                  <option value="0">Recipient...</option>
+                  <option value="1">HCI Friends</option>
+                </select>
+                <button type="submit" id="sendbutton" class="btn x-button">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="form" id="share-form">
+          <p>This link can be used to share with non-users:</p>
+          <input type="text" name="home_link" value="http://goo.gl/6y18e">
+        </div>
+        <div class="footer">
+          <div class="section">
+            <a href="loggedin_house_detail.html">
+              <img src="img/details.png" alt="house detail" />
+            </a>
+          </div>
+          <div class="section">
+            <a href="#">
+              <img src="img/contact.png" alt="contact" />
+            </a>
+          </div>
+          <div class="section">
+            <a href="#">
+              <img src="img/favorite.png" alt="favorite" />
+            </a>
+          </div>
+          <div class="section active">
+            <a href="loggedin_share.html">
+              <img src="img/share.png" alt="share" />
+            </a>
+          </div>
+        </div>
+
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/custom_checkbox_and_radio.js"></script>
+    <script src="js/custom_radio.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/jquery.dropkick-1.0.0.js"></script>
+    <script src="js/homehunt.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('select').dropkick();
+
+        $(".filter").on('click', function (e) {
+          toggleFilters(this); 
+        });
+        $(".filter").first().trigger('click');
+      });
+    </script>
+	</body>
+</html>
+

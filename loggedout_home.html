@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>home.hunt / home</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/flat-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+  <body>
+  <div id="wrapper">
+    <div id="actionbar">
+      <!-- TODO: make this logo white, or reverse bar colors -->
+      <div id="home-button" class="logo"></div>
+      <!-- TODO: make this logo white, or reverse bar colors -->
+      <div id="brand">
+        <h1>home.hunt</h1>
+      </div>
+      <div id="account-button" class="button">
+        <a href="login.html">
+          <img src="img/account-button.png" alt="account" />
+        </a>
+      </div>
+    </div>
+    <div id="content">
+      <form id="search" action="loggedout_filters.html">
+        <button type="submit" class="btn" id="searchbutton">
+          <img src="img/search-button.png" alt="search" />
+        </button>
+        <div id="searchbox">
+          <input type="text" input id="tags" placeholder="College or University">
+        </div>
+      </form>
+      <div id="user-buttons">
+        <a href="login.html" class="btn x-button">Login</a>
+        <a href="register.html" class="btn x-button">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+  <script src="js/homehunt.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var availableTags = ["Carnegie Mellon University"];
+      $("#tags").autocomplete({source: availableTags});
+    });
+  </script>
+  </body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>home.hunt</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/flat-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="splashscreen">
+        <img src="img/home-logo.png" alt="home.hunt" />
+        <div id="brand"><h1>home.hunt</h1></div>
+        <div id="spin"></div>
+      </div>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
+    <script src="js/jquery.spin.js"></script>
+    <script src="js/homehunt.js"></script>
+    <script type="text/javascript">
+      var redirectHome = function () {
+        window.location.href = "loggedout_home.html"; 
+      };
+
+      $(document).ready(function () {
+        $("#spin").spin();
+        setTimeout(function () {
+          $("body").on('click', redirectHome);
+          redirectHome();
+        }, 3000);
+      });
+
+    </script>
+  </body>
+</html>
+

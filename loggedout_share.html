@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+		<title>home.hunt / home</title>
+		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/flat-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+	<body>
+    <div id="wrapper">
+      <div id="actionbar">
+        <!-- TODO: make this logo white, or reverse bar colors -->
+        <div id="back-button" class="logo"></div>
+        <!-- TODO: make this logo white, or reverse bar colors -->
+        <h1>135 Beeler St.</h1>
+        <div id="account-button" class="button">
+          <a href="login.html">
+            <img src="img/account-button.png" alt="account" />
+          </a>
+        </div>
+      </div>
+      <div id="content">
+        <div class="form" id="share-form">
+          <h2>Log in to have group share access!</h1>
+          <p>This link can be used to share with non-users:</p>
+          <input type="text" name="home_link" value="http://goo.gl/6y18e">
+        </div>
+        <div class="footer">
+          <div class="section">
+            <a href="loggedout_house_detail.html">
+              <img src="img/details.png" alt="house detail" />
+            </a>
+          </div>
+          <div class="section">
+            <a href="#">
+              <img src="img/contact.png" alt="contact" />
+            </a>
+          </div>
+          <div class="section">
+            <a href="#">
+              <img src="img/favorite.png" alt="favorite" />
+            </a>
+          </div>
+          <div class="section active">
+            <a href="loggedout_share.html">
+              <img src="img/share.png" alt="share" />
+            </a>
+          </div>
+        </div>
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/homehunt.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+      });
+    </script>
+	</body>
+</html>
+

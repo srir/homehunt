@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+		<title>home.hunt / home</title>
+		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/flat-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+	<body>
+    <div id="wrapper">
+      <div id="actionbar">
+        <!-- TODO: make this logo white, or reverse bar colors -->
+        <div id="back-button" class="logo"></div>
+        <!-- TODO: make this logo white, or reverse bar colors -->
+        <h1>Carnegie Mellon</h1>
+        <div id="account-button" class="button">
+          <a href="account.html">
+            <img src="img/account-button.png" alt="account" />
+          </a>
+        </div>
+      </div>
+      <div id="compare-bar">
+        <h2>Compare</h2>
+        <div class="cmpbutton">
+          <a class="btn" href="loggedin_compare.html">Compare</a>
+        </div>
+        <div class="cmpbutton">
+          <a id="selectbutton" class="btn" href="#">Select all</a>
+        </div>
+      </div>
+      <div id="content">
+        <ul id="resultlist">
+          <li class="result">
+            <div class="seemore">
+              <label class="checkbox">
+                <input type="checkbox" class="check">
+              </label>
+            </div>
+            <h2><span class="fui-location-24"></span> A. 1231 Morewood Ave</h2>
+            <p>Price: $2000/month</p>
+            <p>Bed/Bath: 4BR 2BA</p>
+          </li>
+          <li class="result">
+            <div class="seemore">
+              <label class="checkbox">
+                <input type="checkbox" class="check">
+              </label>
+            </div>
+            <h2><span class="fui-location-24"></span> B. 314 Beeler St</h2>
+            <p>Price: $900/month</p>
+            <p>Bed/Bath: 2BR 1.5BA</p>
+            <p>Amenities: AC, laundry</p>
+          </li>
+          <li class="result">
+            <div class="seemore">
+              <label class="checkbox">
+                <input type="checkbox" class="check">
+              </label>
+            </div> 
+            <h2><span class="fui-location-24"></span> C. 135 Beeler St</h2>
+            <p>Price: $1023/month</p>
+            <p>Bed/Bath: 2BR 2BA</p>
+          </li>
+        </ul>
+      <a href="loggedin_search_results_mapview.html" class="viewbutton">Map View</a>
+      </div>
+    </div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/custom_checkbox_and_radio.js"></script>
+    <script src="js/custom_radio.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/homehunt.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#selectbutton").click(function(event) {
+          $(".check").attr("checked", true);
+          $("label.checkbox").addClass("checked");
+        });
+      });
+    </script>
+	</body>
+</html>
+

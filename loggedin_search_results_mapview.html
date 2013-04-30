@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+		<title>home.hunt / home</title>
+		<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/flat-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+	<body>
+    <div id="wrapper">
+      <div id="actionbar">
+        <!-- TODO: make this logo white, or reverse bar colors -->
+        <div id="back-button" class="logo"></div>
+        <!-- TODO: make this logo white, or reverse bar colors -->
+        <h1>Carnegie Mellon</h1>
+        <div id="account-button" class="button">
+          <a href="account.html">
+            <img src="img/account-button.png" alt="account" />
+          </a>
+        </div>
+      </div>
+      <div id="content">
+        <div id="mapview">
+          <img src="img/mapstock.PNG" alt="map" />
+        </div>
+        <a href="loggedin_search_results_listview.html" class="viewbutton">List View</a>
+      </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/custom_checkbox_and_radio.js"></script>
+    <script src="js/custom_radio.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/homehunt.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#mapview').on('click', function (e) {
+          var $mv = $(e.target);
+
+          $mv.attr('src', 'img/mapstock2.png');
+        });
+      });
+    </script>
+	</body>
+</html>
+
