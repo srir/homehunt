@@ -26,6 +26,12 @@
             <div>
               Price
               <div class="filter-options">
+                <div id="price-filter">
+                </div>
+                <div class="ranges"> 
+                  <span class="range-min">$0</span>
+                  <span class="range-max">$5000</span>
+                </div>
               </div>
             </div>
           </li>
@@ -36,6 +42,10 @@
               <div class="filter-options">
                 <div id="bedroom-filter">
                 </div>
+                <div class="ranges"> 
+                  <span class="range-min">1</span>
+                  <span class="range-max">5</span>
+                </div>
               </div>
             </div>
           </li>
@@ -44,14 +54,12 @@
             <div>
               Bathrooms
               <div class="filter-options">
-              </div>
-            </div>
-          </li>
-          <li class="filter closed">
-            <div class="filter-icon"></div>
-            <div>
-              Amenities
-              <div class="filter-options">
+                <div id="bathroom-filter">
+                </div>
+                <div class="ranges"> 
+                  <span class="range-min">1</span>
+                  <span class="range-max">4</span>
+                </div>
               </div>
             </div>
           </li>
@@ -60,6 +68,14 @@
             <div>
               Property Type
               <div class="filter-options">
+                <div id="proptype-filter">
+                  <select id="proptype" class="x-button property-type" value="proptype" name="proptype" tabindex="1">
+                    <option value="0">Apartment</option>
+                    <option value="1">Condo</option>
+                    <option value="2">Duplex</option>
+                    <option value="3">House</option>
+                  </select>
+                </div>
               </div>
             </div>
           </li>
@@ -68,6 +84,12 @@
             <div>
               Square Feet
               <div class="filter-options">
+                <div id="sqfeet-filter">
+                </div>
+                <div class="ranges"> 
+                  <span class="range-min">0</span>
+                  <span class="range-max">4000</span>
+                </div>
               </div>
             </div>
           </li>
@@ -81,6 +103,7 @@
     <script src="js/custom_checkbox_and_radio.js"></script>
     <script src="js/custom_radio.js"></script>
     <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/jquery.dropkick-1.0.0.js"></script>
     <script src="js/homehunt.js"></script>
     <script type="text/javascript">
       var toggleFilters = function(elem) {
@@ -96,18 +119,50 @@
       }
 
       $(document).ready(function () {
+        $('select').dropkick();
+
         $(".filter").on('click', function (e) {
           toggleFilters(this); 
         });
-        $(".filter").slice(1,2).trigger('click');
+
+        $("#price-filter").slider({
+          min: 0,
+          max: 5000,
+          values: [500, 1500],
+          orientation: "horizontal",
+          range: true,
+        });
 
         $("#bedroom-filter").slider({
           min: 1,
           max: 5,
-          value: 2,
+          values: [2, 3],
           orientation: "horizontal",
-          range: "min",
+          range: true,
         });
+
+        $("#bathroom-filter").slider({
+          min: 1,
+          max: 4,
+          values: [2, 3],
+          orientation: "horizontal",
+          range: true,
+        });
+
+        $("#sqfeet-filter").slider({
+          min: 0,
+          max: 4000,
+          values: [1000, 2500],
+          orientation: "horizontal",
+          range: true,
+        });
+
+        $('.filter-options').click(function (e) {
+          e.stopPropagation();
+        });
+
+
+        $(".filter").slice(1,2).trigger('click');
       });
     </script>
   </body>

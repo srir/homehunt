@@ -249,7 +249,7 @@ body {
 
 .filter .filter-options {
   margin-top: 15px;
-  padding: 5px 15px;
+  padding: 15px 20px;
   display: none;
 }
 
@@ -441,4 +441,25 @@ body {
 #actionbar a:visited {
   color: white;
   text-decoration: none;
+}
+
+.range-min {
+  float: left;
+}
+
+.range-max {
+  float: right;
+}
+
+.ranges {
+  height: 24px;
+  margin-bottom: 5px;
+}
+
+#proptype-filter {
+  height: 60px;
+}
+
+.property-type {
+  width: 100%;
 }
